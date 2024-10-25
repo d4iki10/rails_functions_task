@@ -7,3 +7,12 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+
+<p>
+  <strong>プロフィール画像:</strong><br>
+  <% if @user.profile_image.attached? %>
+    <%= image_tag @user.profile_image %>
+  <% else %>
+    プロフィール画像は未登録です。
+  <% end %>
+</p>
